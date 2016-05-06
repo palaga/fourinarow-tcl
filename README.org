@@ -1,0 +1,35 @@
+* Intro
+  The fourinarow.tcl file contains a minimal, yet complete, bot for
+  the four in a row game from The AI Games. The file contains all the
+  necessary information to get started!
+
+* Debugging
+  Debugging a bot is easy. Just run the script and input some protocol
+  commands. You can mix these with regular tcl commands to print
+  values of variables. For instance:
+
+  #+BEGIN_SRC tcl
+    settings timebank 10000
+    settings time_per_move 500
+    settings player_names player1,player2
+    settings your_bot player1
+    settings your_botid 1
+    settings field_columns 7
+    settings field_rows 6
+    puts $settings
+
+    update game round 1
+    puts $round
+
+    update game field 0,0,0,0,0,0,0;0,0,0,0,0,0,0;0,0,0,0,0,0,0;0,0,0,0,0,0,0;0,0,0,0,0,0,0;0,0,0,0,0,0,0
+    puts $field
+
+    action move 10000
+  #+END_SRC
+
+  Or, for convenience, you can create files with different
+  scenarios. Then, when you want to test a certain scenario, you can
+  simply pipe that file to the script.
+
+
+
